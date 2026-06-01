@@ -70,7 +70,7 @@ export const siteConfig = {
   brandColor: "#1a6bb5",
 
   // ── Hero content ─────────────────────────────────────────────────
-  heroTagline: "Northern Kentucky's Trusted Foundation Repair Service",
+  heroTagline: "Northern Kentucky Foundation Repair Service",
   heroSubtext: "Cracks, settling, bowing walls — we fix it all. Call for a free inspection.",
   heroAlt: "Professional foundation repair crew at work on a residential home",
 
@@ -98,7 +98,7 @@ export const siteConfig = {
       title: "Foundation Piering & Leveling",
       slug: "piering-leveling",
       description:
-        "Helical piers and steel push piers to stabilize and lift sinking foundations. We restore your home to its original level. Lifetime warranty available.",
+        "Helical piers and steel push piers to stabilize and lift sinking foundations. We restore your home to its original level. ",
       photo: "/photos/commercial.jpg",
     },
     {
@@ -115,7 +115,7 @@ export const siteConfig = {
     {
       question: "How much does foundation repair cost?",
       answer:
-        "$500-$15,000+ depending on severity. Minor crack repairs start at $500. Major piering projects can run $5,000-$15,000. Call (859) 555-0600 for free inspection.",
+        "Contact us for a free inspection. Call (859) 555-0600.",
     },
     {
       question: "What causes foundation problems?",
@@ -140,7 +140,7 @@ export const siteConfig = {
     {
       question: "Do you offer warranties?",
       answer:
-        "Yes. We offer lifetime transferable warranties on structural repairs.",
+        "Yes. We offer p warranties on structural repairs.",
     },
     {
       question: "Do you offer free inspections?",
@@ -242,7 +242,7 @@ export const siteConfig = {
       lat: "39.0003",
       lng: "-84.5013",
       intro:
-        "Taylor Mill has grown into a thriving community, and NKY Foundation Pros is proud to serve the homes and businesses that make this city special. From the established neighborhoods along Taylor Mill Road to the newer developments spreading across the city, we provide foundation repair that Taylor Mill residents trust. Our team understands the local soil conditions — the clay that expands when wet and contracts when dry, creating the cyclical pressure that damages foundations over time. We tailor our repair approach to each property, ensuring the best possible results every single time.",
+        "Taylor Mill has grown into a thriving community, and NKY Foundation Pros is proud to serve the homes and businesses that make this city special. From the established neighborhoods along Taylor Mill Road to the newer developments spreading across the city, we provide foundation repair that Taylor Mill residents trust. Our team understands the local soil conditions — the clay that expands when wet and contracts when dry, creating the cyclical pressure that damages foundations over time. We tailor our repair approach to each property, ensuring great results every time.",
     },
     {
       name: "Villa Hills, KY",
@@ -307,7 +307,7 @@ export const siteConfig = {
       lat: "39.2289",
       lng: "-84.3541",
       intro:
-        "Montgomery's tree-canopied streets and stately homes make it one of the Cincinnati area's premier residential communities. NKY Foundation Pros extends our premium foundation repair services to Montgomery homeowners who expect nothing but the best. The large lots, mature landscaping, and varied elevation throughout Montgomery require a careful, experienced approach — and our team delivers exactly that. From historic properties near the downtown village center to sprawling estates on the outskirts, we bring the same meticulous attention to every foundation repair project.",
+        "Montgomery's tree-canopied streets and stately homes make it one of the Cincinnati area's premier residential communities. NKY Foundation Pros extends our premium foundation repair services to Montgomery homeowners who expect quality service. The large lots, mature landscaping, and varied elevation throughout Montgomery require a careful, experienced approach — and our team delivers exactly that. From historic properties near the downtown village center to sprawling estates on the outskirts, we bring the same meticulous attention to every foundation repair project.",
     },
     {
       name: "Deer Park, OH",
@@ -315,7 +315,7 @@ export const siteConfig = {
       lat: "39.2053",
       lng: "-84.3922",
       intro:
-        "Deer Park is a welcoming, family-friendly community just north of Cincinnati, and NKY Foundation Pros is proud to bring our foundation repair services to this great neighborhood. From the well-kept ranch homes along Blue Ash Road to the two-story colonials in the residential side streets, Deer Park homes deserve solid foundations that stand the test of time. We offer flexible scheduling, fair pricing, and the kind of dependable service that Deer Park homeowners appreciate. A stable foundation protects your biggest investment — and we deliver every time.",
+        "Deer Park is a welcoming, family-friendly community just north of Cincinnati, and NKY Foundation Pros is proud to bring our foundation repair services to this great neighborhood. From the well-kept ranch homes along Blue Ash Road to the two-story colonials in the residential side streets, Deer Park homes deserve solid foundations that stand the test of time. We offer flexible scheduling, Flexible scheduling, and the kind of dependable service that Deer Park homeowners appreciate. A stable foundation protects your biggest investment — and we deliver every time.",
     },
     {
       name: "Amberly, OH",
@@ -416,7 +416,7 @@ export const siteConfig = {
     {
       name: "Jennifer M.",
       location: "Florence, KY",
-      text: "NKY Foundation Pros fixed the cracks in our basement wall in Florence. Fast, professional, and they explained everything. Our foundation is solid now. Best foundation repair service we've used in Northern Kentucky.",
+      text: "NKY Foundation Pros fixed the cracks in our basement wall in Florence. Fast, professional, and they explained everything. Our foundation is solid now. Professional foundation repair service in Northern Kentucky.",
     },
     {
       name: "Robert T.",
@@ -426,12 +426,12 @@ export const siteConfig = {
     {
       name: "Sarah K.",
       location: "Fort Mitchell, KY",
-      text: "Our foundation wall was bowing inward. Scary situation. NKY Foundation Pros installed wall anchors and stopped the movement. They probably saved our house. Best foundation repair company in NKY.",
+      text: "Our foundation wall was bowing inward. Scary situation. NKY Foundation Pros installed wall anchors and stopped the movement. They probably saved our house. Professional foundation repair company in NKY.",
     },
     {
       name: "Mike D.",
       location: "Erlanger, KY",
-      text: "Had cracks in our foundation that were getting worse every year. NKY Foundation Pros came out, diagnosed the issue, and fixed everything in two days. Professional foundation repair at a fair price.",
+      text: "Had cracks in our foundation that were getting worse every year. NKY Foundation Pros came out, diagnosed the issue, and fixed everything in two days. Professional foundation repair at a competitive price.",
     },
     {
       name: "Jennifer P.",
@@ -451,7 +451,7 @@ export const siteConfig = {
     {
       name: "Tom W.",
       location: "Fort Thomas, KY",
-      text: "Our Fort Thomas home sits on a hillside and we had retaining wall issues. NKY Foundation Pros came out, assessed the situation, and repaired everything. Our foundation is solid now. Best foundation repair in NKY.",
+      text: "Our Fort Thomas home sits on a hillside and we had retaining wall issues. NKY Foundation Pros came out, assessed the situation, and repaired everything. Our foundation is solid now. Professional foundation repair in NKY.",
     },
   ] as { name: string; location: string; text: string }[],
 };
