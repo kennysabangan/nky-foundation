@@ -34,8 +34,8 @@ export interface Testimonial {
 export const siteConfig = {
   // ── Business identity ──────────────────────────────────────────────
   businessName: "NKY Foundation Pros",
-  phone: "(859) 555-0600",
-  phoneE164: "+18595550600",
+  phone: "(859) 900-8065",
+  phoneE164: "+18599008065",
   domain: "nkyfoundationpros.com",
   siteUrl: "https://nkyfoundationpros.com",
 
@@ -106,7 +106,7 @@ export const siteConfig = {
       slug: "bowing-wall-repair",
       description:
         "Wall anchors and carbon fiber straps to stabilize and straighten bowing foundation walls. Prevents further movement and potential collapse.",
-      photo: "/photos/screen-cleaning.jpg",
+      photo: "/photos/bowing-wall-repair.jpg",
     },
   ] as Service[],
 
@@ -115,7 +115,7 @@ export const siteConfig = {
     {
       question: "How much does foundation repair cost?",
       answer:
-        "Contact us for a free inspection. Call (859) 555-0600.",
+        "Contact us for a free inspection. Call (859) 900-8065.",
     },
     {
       question: "What causes foundation problems?",
@@ -150,7 +150,7 @@ export const siteConfig = {
     {
       question: "How do I schedule?",
       answer:
-        "Call (859) 555-0600. We serve all of Northern Kentucky and greater Cincinnati.",
+        "Call (859) 900-8065. We serve all of Northern Kentucky and greater Cincinnati.",
     },
   ] as FAQ[],
 
