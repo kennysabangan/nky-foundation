@@ -8,13 +8,13 @@ const { businessName, phone, phoneE164, siteUrl, serviceKeyword, serviceKeywordP
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1),
+  "serviceType": serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase()),
   "provider": {
     "@type": "LocalBusiness",
     "name": businessName,
     "telephone": phoneE164,
   },
-  "areaServed": { "@type": "State", "name": "Kentucky" },
+  "areaServed": siteConfig.cities.map((c) => ({ "@type": "City", "name": c.name })),
   "description": `Professional ${serviceKeywordPlural} for residential and commercial properties in ${city}.`,
 };
 
@@ -29,8 +29,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`${serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} Services ${city} | ${businessName}`}
-  description={`${serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} services in ${city}. We provide ${serviceKeywordPlural} on homes, offices, and commercial buildings across ${region}. Call ${phone} for a free estimate.`}
+  title={`Foundation Repair Service Areas in Northern Kentucky | ${businessName}`}
+  description={`${serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} services in ${city}. We provide ${serviceKeywordPlural} on homes, offices, and commercial buildings across ${region}. Call ${phone} for a free estimate.`}
   canonicalURL={`${siteUrl}/foundation/`}
   schema={[breadcrumbSchema, serviceSchema]}
 >
@@ -38,7 +38,7 @@ const breadcrumbSchema = {
 <!-- Hero -->
 <section class="hero-section">
   <div class="container">
-    <h1>{serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} Services in {city}</h1>
+    <h1>{serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Services in {city}</h1>
     <p class="hero-sub">Residential {serviceKeyword}, commercial {serviceKeyword}, and more. Serving all of {region}.</p>
     <PhoneCTA />
   </div>
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
 <div class="container py-6 text-center">
   <img
     src="/photos/hero.jpg"
-    alt={`${serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} services in ${city}`}
+    alt={`${serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} services in ${city}`}
     class="site-photo mx-auto max-w-2xl"
     loading="eager"
   />
@@ -56,7 +56,7 @@ const breadcrumbSchema = {
 
 <!-- Services -->
 <div class="content-section">
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4">Our {serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} Services</h2>
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4">Our {serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Services</h2>
 
   <p>{businessName} provides professional {serviceKeywordPlural} throughout {city}. We repair foundations on homes, offices, and commercial buildings. Here are the {serviceKeywordPlural} we offer:</p>
 
@@ -72,25 +72,25 @@ const breadcrumbSchema = {
     ))}
   </div>
 
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">How Our {serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} Service Works</h2>
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">How Our {serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Service Works</h2>
 
   <p>Getting your foundation repaired by {businessName} is easy. Here's how it works:</p>
 
   <p><strong>Step 1: Call Us.</strong> Give us a call at {phone} and tell us about the foundation issues you're experiencing. We'll ask about the symptoms you're seeing — cracks, settling, bowing walls, water intrusion.</p>
 
-  <p><strong>Step 2: Get Your Free Estimate.</strong> We'll give you a clear, upfront price for your {serviceKeyword}. No hidden fees, no surprises. Most homeowners are surprised at how affordable professional {serviceKeyword} can be.</p>
+  <p><strong>Step 2: Free Inspection and Estimate.</strong> We look at the cracks, floors, and walls, find the likely cause, and give you a written estimate that explains the recommended repair and its price before any work starts.</p>
 
-  <p><strong>Step 3: We Clean Your Windows.</strong> Our team arrives on time with all the equipment and supplies needed to repair your foundation. We work efficiently and treat your property with respect.</p>
+  <p><strong>Step 3: We Make the Repair.</strong> Our team arrives on time with all the equipment and supplies needed to repair your foundation. We work efficiently and treat your property with respect.</p>
 
-  <p><strong>Step 4: Enjoy the View.</strong> Your foundation will be stable, secure, and protected. Not happy with the results? We'll come back and re-clean any windows for free. That's our satisfaction guarantee.</p>
+  <p><strong>Step 4: Final Walk-Through.</strong> When the work is done, we walk through the repair with you, explain what was installed and what to watch for, and leave the work area clean.</p>
 
-  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">{serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} Service Areas</h2>
+  <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">{serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Service Areas</h2>
 
-  <p>We provide {serviceKeywordPlural} across {city}. We serve:</p>
+  <p>Our main service areas in Boone, Kenton, and Campbell counties:</p>
 
   <ul>
     {cities.map((c) => (
-      <li><a href={`/foundation/${c.slug}/`}>{serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} in {c.name}</a></li>
+      <li><a href={`/foundation/${c.slug}/`}>{serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} in {c.name}</a></li>
     ))}
   </ul>
 </div>
@@ -107,8 +107,8 @@ const breadcrumbSchema = {
 <!-- Final CTA -->
 <section class="bg-brand-dark text-white">
   <div class="cta-strip container">
-    <h2 class="text-white text-xl md:text-2xl font-bold mb-2">Call Now for {serviceKeyword.charAt(0).toUpperCase() + serviceKeyword.slice(1)} in {city}</h2>
-    <p class="text-white/90 text-base mb-4">We provide ${serviceKeywordPlural} across {region}.</p>
+    <h2 class="text-white text-xl md:text-2xl font-bold mb-2">Call Now for {serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} in {city}</h2>
+    <p class="text-white/90 text-base mb-4">We provide {serviceKeywordPlural} across {region}.</p>
     <PhoneCTA label="Call Now" />
   </div>
 </section>
