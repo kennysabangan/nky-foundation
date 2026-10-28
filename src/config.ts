@@ -28,8 +28,8 @@ export interface FAQ {
 export const siteConfig = {
   // ── Business identity ──────────────────────────────────────────────
   businessName: "NKY Foundation Pros",
-  phone: "(859) 900-8065",
-  phoneE164: "+18599008065",
+  phone: "(714) 494-9486",
+  phoneE164: "+17144949486",
   domain: "nkyfoundationpros.com",
   siteUrl: "https://nkyfoundationpros.com",
 
@@ -113,7 +113,7 @@ export const siteConfig = {
     {
       question: "How much does foundation repair cost?",
       answer:
-        "It depends on the repair. Crack injection, piering, and wall anchors are priced very differently, and the number of piers or anchors a house needs drives most of the cost. Call (859) 900-8065 for a free inspection and written estimate.",
+        "It depends on the repair. Crack injection, piering, and wall anchors are priced very differently, and the number of piers or anchors a house needs drives most of the cost. Call (714) 494-9486 for a free inspection and written estimate.",
     },
     {
       question: "What causes foundation problems?",
@@ -148,7 +148,7 @@ export const siteConfig = {
     {
       question: "How do I schedule?",
       answer:
-        "Call (859) 900-8065 to set up a free inspection. Our main service areas are Florence, Covington, Fort Thomas, Newport, Fort Mitchell, Erlanger, Edgewood, and Independence.",
+        "Call (714) 494-9486 to set up a free inspection. Our main service areas are Florence, Covington, Fort Thomas, Newport, Fort Mitchell, Erlanger, Edgewood, and Independence.",
     },
   ] as FAQ[],
 
