@@ -29,8 +29,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`Foundation Repair Service Areas in Northern Kentucky | ${businessName}`}
-  description={`${serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} services in ${city}. We provide ${serviceKeywordPlural} on homes, offices, and commercial buildings across ${region}. Call ${phone} for a free estimate.`}
+  title="Foundation Repair & Waterproofing | Cincinnati & Northern KY"
+  description={`Foundation crack repair, piering, wall anchors, and basement waterproofing in Cincinnati & Northern Kentucky. Free inspection: ${phone}.`}
   canonicalURL={`${siteUrl}/foundation/`}
   schema={[breadcrumbSchema, serviceSchema]}
 >
@@ -38,8 +38,8 @@ const breadcrumbSchema = {
 <!-- Hero -->
 <section class="hero-section">
   <div class="container">
-    <h1>{serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Services in {city}</h1>
-    <p class="hero-sub">Residential {serviceKeyword}, commercial {serviceKeyword}, and more. Serving all of {region}.</p>
+    <h1>Foundation Repair &amp; Basement Waterproofing Services</h1>
+    <p class="hero-sub">Residential and commercial {serviceKeyword} and basement waterproofing in {city} and the Greater Cincinnati area.</p>
     <PhoneCTA />
   </div>
 </section>
@@ -63,7 +63,7 @@ const breadcrumbSchema = {
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
     {services.map((service) => (
       <div class="service-card">
-        <img src={service.photo} alt={`${service.title} — ${businessName}`} loading="lazy" />
+        {service.photo && <img src={service.photo} alt={`${service.title} — ${businessName}`} loading="lazy" />}
         <div class="card-body">
           <h3>{service.title}</h3>
           <p>{service.description}</p>
@@ -71,6 +71,16 @@ const breadcrumbSchema = {
       </div>
     ))}
   </div>
+
+  <h2 id="basement-waterproofing" class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">Basement Waterproofing</h2>
+
+  <p>A wet basement usually traces back to one of a few sources: rain and roof runoff draining toward the house, groundwater pressing against the walls and floor, or a crack or joint that gives that water a way in. The right fix depends on where the water is coming from, so we start by looking at the grading, gutters, and downspouts outside and at where the water shows up inside.</p>
+
+  <p><strong>Exterior grading and downspout extensions.</strong> When water pools against the foundation after storms, the first step is often the simplest: regrading the soil so it slopes away from the house and extending downspouts so roof water is released well away from the walls. It is the least invasive option and is worth doing before, or alongside, any interior work.</p>
+
+  <p><strong>Interior drain tile and sump pump.</strong> When water seeps in where the wall meets the floor, or the basement takes on water in wet seasons even with good grading, an interior perimeter drain can collect it under the floor along the walls and carry it to a sump pump that discharges it outside. This system manages water that reaches the wall rather than stopping it at the surface, so it depends on a working pump; a battery backup is worth considering.</p>
+
+  <p><strong>Crack injection and wall sealing.</strong> When water comes through a specific crack in a poured concrete wall, injecting the crack with polyurethane or epoxy can seal that leak. Waterproof coatings on interior walls can help with dampness and light seepage, but they are not designed to hold back water under pressure; for block walls or recurring leaks, drainage is usually the more reliable approach.</p>
 
   <h2 class="text-brand text-xl md:text-2xl font-bold mb-4 mt-8">How Our {serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} Service Works</h2>
 

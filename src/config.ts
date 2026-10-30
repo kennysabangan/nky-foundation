@@ -9,7 +9,7 @@ export interface Service {
   title: string;
   slug: string;
   description: string;
-  photo: string;
+  photo?: string;
 }
 
 export interface City {
@@ -68,7 +68,12 @@ export const siteConfig = {
   brandColor: "#1a6bb5",
 
   // ── Hero content ─────────────────────────────────────────────────
-  heroTagline: "Northern Kentucky Foundation Repair Service",
+  // Homepage <title> / meta description. Keep title <= 60 chars and
+  // description 70-160 chars (search results truncate past that).
+  homeTitle: "Foundation Repair Cincinnati & Northern KY | NKY Pros",
+  homeDescription:
+    "Foundation repair and basement waterproofing in Cincinnati & Northern Kentucky: crack injection, piering, wall anchors. Free inspection: (714) 494-9486.",
+  heroTagline: "Foundation Repair in Cincinnati & Northern Kentucky",
   heroSubtext: "Cracks, settling, bowing walls — we fix it all. Call for a free inspection.",
   heroAlt: "Professional foundation repair crew at work on a residential home",
 
@@ -105,6 +110,12 @@ export const siteConfig = {
       description:
         "Wall anchors and carbon fiber straps to brace bowing basement walls against further inward movement. Wall anchors can also be tightened over time to gradually pull a wall back toward plumb.",
       photo: "/photos/bowing-wall-repair.jpg",
+    },
+    {
+      title: "Basement Waterproofing",
+      slug: "basement-waterproofing",
+      description:
+        "Fixes for wet basements matched to where the water is coming from: regrading and downspout extensions outside, interior drain tile with a sump pump, or crack injection where water comes through a specific crack.",
     },
   ] as Service[],
 
@@ -220,3 +231,12 @@ export const siteConfig = {
     },
   ] as City[],
 };
+
+/**
+ * Page <title> helper: appends " | businessName" only when the result stays
+ * within 60 characters; otherwise returns the primary phrase on its own.
+ */
+export function seoTitle(primary: string, brand: string = siteConfig.businessName): string {
+  const full = `${primary} | ${brand}`;
+  return full.length <= 60 ? full : primary;
+}

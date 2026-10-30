@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { siteConfig } from '../../config';
+import { siteConfig, seoTitle } from '../../config';
 import type { City } from '../../config';
 
 export function getStaticPaths() {
@@ -39,8 +39,8 @@ const stateAbbr = city.name.includes('OH') ? 'OH' : 'KY';
 ---
 
 <BaseLayout
-  title={`${serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} in ${city.name} | ${businessName}`}
-  description={`Need ${serviceKeyword} in ${city.name}? ${businessName} provides residential and commercial ${serviceKeywordPlural} in ${cityName} and all across ${regionCity}. Call ${phone} for a free estimate.`}
+  title={seoTitle(`Foundation Repair in ${city.name}`)}
+  description={`Foundation repair in ${city.name}: crack injection, piering, bowing walls, and basement waterproofing. Free inspection and estimate: ${phone}.`}
   canonicalURL={`${siteUrl}/foundation/${city.slug}/`}
   schema={[breadcrumbSchema, cityServiceSchema]}
 >
@@ -139,7 +139,7 @@ const stateAbbr = city.name.includes('OH') ? 'OH' : 'KY';
     gap: 1.25rem;
   }
   @media (min-width: 769px) {
-    .services-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   }
   .service-card {
     border: 1px solid #e5e7eb;
@@ -411,7 +411,7 @@ const stateAbbr = city.name.includes('OH') ? 'OH' : 'KY';
     <div class="services-grid">
       {services.map((s) => (
         <div class="service-card">
-          <img src={s.photo} alt={`${s.title} in ${cityName} — ${businessName}`} loading="lazy" />
+          {s.photo && <img src={s.photo} alt={`${s.title} in ${cityName} — ${businessName}`} loading="lazy" />}
           <div class="service-card-body">
             <h3>{s.title}</h3>
             <p>{s.description}</p>

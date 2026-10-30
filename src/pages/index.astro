@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../config';
 
-const { businessName, phone, phoneE164, serviceKeyword, serviceKeywordPlural, city, region, faqs, services, cities, heroTagline, heroSubtext, heroAlt } = siteConfig;
+const { businessName, phone, phoneE164, serviceKeyword, serviceKeywordPlural, city, region, faqs, services, cities, heroTagline, heroSubtext, heroAlt, homeTitle, homeDescription } = siteConfig;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -16,8 +16,8 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title={`${businessName} | ${serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} in ${city}`}
-  description={`Need ${serviceKeyword} in ${city}? ${businessName} provides residential and commercial ${serviceKeywordPlural} in Florence, Covington, Fort Mitchell, and all across ${region}. Call ${phone} for a free estimate.`}
+  title={homeTitle}
+  description={homeDescription}
   schema={faqSchema}
 >
 
@@ -282,7 +282,7 @@ const faqSchema = {
     .form-col { flex: 0 0 380px; }
     .name-row { flex-direction: row; gap: 0.75rem; }
 
-    .services-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .service-card img { aspect-ratio: 3/2; }
 
     .areas-list { columns: 3; }
@@ -342,7 +342,7 @@ const faqSchema = {
     <div class="services-grid">
       {services.map((service) => (
         <div class="service-card">
-          <img src={service.photo} alt={`${service.title} — ${businessName}`} loading="lazy" />
+          {service.photo && <img src={service.photo} alt={`${service.title} — ${businessName}`} loading="lazy" />}
           <div class="service-card-body">
             <h3>{service.title}</h3>
             <p>{service.description}</p>
@@ -355,7 +355,7 @@ const faqSchema = {
   <!-- Content -->
   <section class="section">
     <h2 class="section-title" style="text-align:left;">{serviceKeyword.replace(/\b\w/g, (m) => m.toUpperCase())} in {city}</h2>
-    <p class="content-text">If you're noticing cracks, settling, or bowing walls in {city}, the first step is finding out what's causing them. We provide {serviceKeywordPlural} across {region}.</p>
+    <p class="content-text">If you're noticing cracks, settling, bowing walls, or water in the basement, the first step is finding out what's causing them. We provide {serviceKeywordPlural} and <a href="/foundation/#basement-waterproofing">basement waterproofing</a> across {city} and the Greater Cincinnati area.</p>
     <p class="content-text">{businessName} repairs foundations on homes and commercial buildings. Whether you need crack sealing, piering and leveling, or bowing wall repair, the job starts with a free inspection and a written estimate.</p>
     <p class="content-text">We use established repair methods including epoxy injection, helical piers, wall anchors, and carbon fiber straps. Every inspection comes with an honest assessment of what each repair option can and can't do for your foundation.</p>
   </section>
